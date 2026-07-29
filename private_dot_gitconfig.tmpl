@@ -1,0 +1,61 @@
+[alias]
+	# Add, commit and push in one command
+	acp = "!f() { git add -A && git commit -m \"$@\" && git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"; }; f"
+	# Uncommit the last commit but keep the changes in the working directory
+	uncommit = reset --soft HEAD~
+	## Commit and push in one command without adding all changes
+	cp = "!f() { git commit -m \"$@\" && git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"; }; f"
+	# Remove local branches which are not on the remote anymore
+	sync = "!git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
+
+[user]
+	name = {{ .name }}
+	email = {{ .email }}
+[core]
+	editor = nano
+	excludesfile = {{.chezmoi.homeDir}}/.gitignore
+	fsmonitor = true
+	untrackedCache = true
+	emptyDirectories = true
+	ignorecase = false
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = main
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[commit]
+	verbose = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[merge]
+	conflictstyle = zdiff3
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

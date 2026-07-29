@@ -1,0 +1,87 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "small_model": "openrouter/deepseek/deepseek-v4-flash",
+  "disabled_providers": [
+    "opencode"
+  ],
+  "default_agent": "OpenCode-Builder",
+  "instructions": [
+    ".github/copilot-instructions.md",
+    "~/.copilot/copilot-instructions.md",
+    "~/AGENTS.md",
+    "~/.config/opencode/AGENTS.md"
+  ],
+  "skills": {
+    "paths": [
+      ".github/**/skills/**/*.md",
+      "~/.copilot/**/skills/**/*.md"
+    ]
+  },
+  "plugin": [
+    "@mohak34/opencode-notifier@latest",
+    "context-mode",
+    "oh-my-openagent",
+    [
+      "@plannotator/opencode@latest",
+      {
+        "workflow": "all-agents"
+      }
+    ],
+    "./plugins/caveman/plugin.js"
+  ],
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": false
+    },
+    "codegraph": {
+      "type": "local",
+      "command": [
+        "codegraph",
+        "serve",
+        "--mcp"
+      ],
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@playwright/mcp@latest"
+      ],
+      "enabled": false
+    },
+    "atlassian": {
+      "type": "remote",
+      "url": "https://mcp.atlassian.com/v1/mcp/authv2",
+      "enabled": false
+    }
+  },
+  "watcher": {
+    "ignore": [
+      "**/node_modules/**",
+      "**/.git/**",
+      "**/dist/**",
+      "**/.nuxt/**",
+      "**/coverage/**",
+      "**/target/**",
+      "**/build/**",
+      "**/out/**"
+    ]
+  },
+  "lsp": true,
+  "formatter": true,
+  "share": "manual",
+  "autoupdate": true,
+  "experimental": {
+    "disable_paste_summary": true
+  },
+  "provider": {
+    "openrouter": {
+      "models": {
+        "openrouter/auto-beta": {}
+      }
+    }
+  }
+}

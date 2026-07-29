@@ -1,0 +1,114 @@
+# =========================
+# Company specific settings
+# =========================
+source ~/.bash_company_specific
+
+# =========================
+# Folders
+# =========================
+export DEV_FOLDER="$HOME/projects"
+
+alias asdf="mise"
+alias dev="cd $DEV_FOLDER"
+alias ls="ls -la --color=auto"
+
+run-review() {
+  local remove_file=false
+  local args=()
+
+  # Parse options
+  for arg in "$@"; do
+    case "$arg" in
+      -r|--remove) remove_file=true ;;
+      *) args+=("$arg") ;;
+    esac
+  done
+
+  # 1. Detect current branch
+  local current_branch
+  current_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  if [ -z "$current_branch" ] || [ "$current_branch" = "HEAD" ]; then
+    echo "❌ Error: Not on a valid git branch." && return 1
+  fi
+
+  # 2. Dynamically find parent/base branch (e.g. master, main, or feat/base-branch)
+  local base_branch
+  base_branch=$(git log --show-pulls --first-parent --format="%D" | grep -o 'origin/[^, ]*' | head -n1 | sed 's/origin\///')
+
+  if [ -z "$base_branch" ] || [ "$base_branch" = "$current_branch" ]; then
+    # Fallback: check against main or master
+    if git rev-parse --verify main >/dev/null 2>&1; then
+      base_branch="main"
+    elif git rev-parse --verify master >/dev/null 2>&1; then
+      base_branch="master"
+    else
+      echo "❌ Error: Could not auto-detect base branch." && return 1
+    fi
+  fi
+
+  echo "🔍 Reviewing: '$current_branch' against base '$base_branch'..."
+
+  # 3. Mode Selection: Send to GitHub PR or Local-Only File
+  if [[ "${FUNCNAME[0]}" == "run-and-send-review" ]] || [[ "${args[0]}" == "send" ]]; then
+    # --- RUN & SEND TO GITHUB ---
+    local pr_num commit_sha
+    pr_num=$(gh pr view --json number -q .number 2>/dev/null)
+    commit_sha=$(gh pr view --json headRefOid -q .headRefOid 2>/dev/null)
+
+    if [ -z "$pr_num" ]; then
+      echo "❌ Error: No open GitHub PR found for '$current_branch'. Create a PR first." && return 1
+    fi
+
+    echo "🚀 Running local OCR review and posting inline comments to PR #$pr_num..."
+
+    # Run review & save local artifact
+    ocr review --from "$base_branch" --to "$current_branch" --format json > .ocr-review.json
+
+    # Post comment to GitHub
+    gh api \
+      --method POST \
+      -H "Accept: application/vnd.github+json" \
+      /repos/{owner}/{repo}/pulls/"$pr_num"/reviews \
+      -f commit_id="$commit_sha" \
+      -f event="COMMENT" \
+      -f body="### 🤖 Open Code Review Report ($current_branch vs $base_branch)"
+
+    echo "✅ Comments successfully posted to PR #$pr_num!"
+
+  else
+    # --- RUN LOCAL ONLY ---
+    echo "📄 Generating local review report..."
+    ocr review --from "$base_branch" --to "$current_branch" --format json > .ocr-review.json
+    echo "✅ Review saved to .ocr-review.json"
+  fi
+
+  # 4. Optional cleanup
+  if [ "$remove_file" = true ]; then
+    rm -f .ocr-review.json
+    echo "🧹 Removed local .ocr-review.json file."
+  fi
+}
+
+# Alias mapping so both names point to the function logic
+alias review-remote="run-review send -r"
+alias review-local="run-review && echo '✅ Review saved to .ocr-review.json'"
+
+
+# =========================
+# Mise (ASDF) - source de vérité unique pour la gestion des versions d'outils
+# =========================
+eval "$(mise activate zsh)"
+
+# =========================
+# Zsh options
+# =========================
+setopt glob_dots # Inclure les fichiers commençant par un point dans les expansions de chemin
+
+# =========================
+# Codegraph bootstrap automatic only for not initialized git repos
+# =========================
+export CODEGRAPH_BOOTSTRAP_JOBS=6 # Nombre de jobs parallèles pour le bootstrap de Codegraph
+~/.local/bin/codegraph-bootstrap-init-only.sh
+
+# Temp files cleanup
+rm -f /private/var/folders/02/2pc468ld3p1810ss1k7fd7zc0000gn/T/opencode-wal-*(N)

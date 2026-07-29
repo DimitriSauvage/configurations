@@ -1,0 +1,31 @@
+{
+    "bell": true,
+    "suppressWhenFocused": true,
+    "notificationSystem": "ghostty",
+    "events": {
+        "subagent_complete": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        },
+        "session_started": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        },
+        "user_message": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        },
+        "client_connected": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        }
+    }
+}
