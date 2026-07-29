@@ -27,6 +27,7 @@ if [ "$(basename "${SHELL:-}")" != "zsh" ] && command -v zsh >/dev/null 2>&1; th
   chsh -s "$(command -v zsh)" || echo "Change ton shell manuellement : chsh -s $(command -v zsh)"
 fi
 
-chezmoi apply -v $USER
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yparent
+chezmoi apply init --apply -v $USER
 
 info "Terminé. Ouvre un nouveau terminal."
