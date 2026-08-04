@@ -7,7 +7,25 @@
 	cp = "!f() { git commit -m \"$@\" && git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"; }; f"
 	# Remove local branches which are not on the remote anymore
 	sync = "!git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
-
+	tp = "!f() { \
+		tag=\"$1\"; \
+		shift; \
+		msg=\"\"; \
+		while [ $# -gt 0 ]; do \
+		case \"$1\" in \
+			-m) \
+			shift; \
+			msg=\"$1\"; \
+			;; \
+		esac; \
+		shift; \
+		done; \
+		if [ -z \"$msg\" ]; then \
+		git tag \"$tag\" && git push origin \"$tag\"; \
+		else \
+		git tag -a \"$tag\" -m \"$msg\" && git push origin \"$tag\"; \
+		fi; \
+	}; f"
 [user]
 	name = {{ .name }}
 	email = {{ .email }}
