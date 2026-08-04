@@ -30,4 +30,6 @@ fi
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yparent
 chezmoi apply init --apply -v $USER
 
+mise install
+
 info "Terminé. Ouvre un nouveau terminal."
