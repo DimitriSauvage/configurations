@@ -24,18 +24,18 @@
     "explore": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/~deepseek-v4-flash-latest"
+          "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
         }
       ],
-      "model": "openrouter/deepseek/~deepseek-v4-flash-latest"
+      "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
     },
     "librarian": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/~deepseek-v4-flash-latest"
+          "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
         }
       ],
-      "model": "openrouter/deepseek/~deepseek-v4-flash-latest"
+      "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
     },
     "hephaestus": {
       "fallback_models": [
@@ -138,7 +138,7 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/deepseek/~deepseek-v4-flash-latest"
+      "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
     },
     "oracle": {
       "fallback_models": [
@@ -249,10 +249,10 @@
     "quick": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/~deepseek-v4-flash-latest"
+          "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
         }
       ],
-      "model": "openrouter/deepseek/~deepseek-v4-flash-latest"
+      "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
     },
     "ultrabrain": {
       "fallback_models": [
