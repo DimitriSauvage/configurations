@@ -1,9 +1,10 @@
-tap "anomalyco/tap", trusted: true
+tap "1jehuang/jcode", trusted: true
+tap "anomalyco/tap"
 tap "atlassian/acli", trusted: true
 tap "jetpackduba/apps", trusted: true
 tap "rtk-ai/tap", trusted: true
-tap "superset-sh/tap", trusted: true
-tap "tabularisdb/tabularis", "https://github.com/TabularisDB/homebrew-tabularis", trusted: true
+tap "superset-sh/tap"
+tap "tabularisdb/tabularis", "https://github.com/TabularisDB/homebrew-tabularis"
 tap "tilt-dev/tap", trusted: true
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
@@ -11,8 +12,6 @@ brew "azure-cli"
 brew "bash"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
-# Lightweight DNS forwarder and DHCP server
-brew "dnsmasq", restart_service: :changed
 # GitHub command-line tool
 brew "gh"
 # Git extension for versioning large files
@@ -43,6 +42,8 @@ brew "uv"
 brew "worktrunk"
 # UNIX shell (command interpreter)
 brew "zsh"
+# AI coding agent powered by Claude and ChatGPT
+brew "1jehuang/jcode/jcode"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode", trusted: true
 # CLI and host-service for Superset
@@ -73,6 +74,8 @@ cask "tabularisdb/tabularis/tabularis", trusted: true
 cask "taphouse"
 # Open-source code editor
 cask "visual-studio-code"
+vscode "gitwand.gitwand-vscode"
+vscode "saoudrizwan.claude-dev"
 npm "@alibaba-group/open-code-review"
 npm "@biomejs/biome"
 npm "@colbymchenry/codegraph"
