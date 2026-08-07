@@ -18,7 +18,7 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/deepseek/deepseek-v4-pro",
+      "model": "openrouter/z-ai/glm-5.2",
       "variant": "high"
     },
     "explore": {
@@ -40,7 +40,7 @@
     "hephaestus": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -74,13 +74,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/deepseek/deepseek-v4-pro",
+      "model": "openrouter/z-ai/glm-5.2",
       "variant": "high"
     },
     "momus": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -114,7 +114,7 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/deepseek/deepseek-v4-pro"
+      "model": "openrouter/z-ai/glm-5.2"
     },
     "OpenCode-Builder": {
       "description": "As soon as possible, act as an orchestrator and use sub agents to parallelize tasks. If the task is a quick fix, do it. If it requires multiple changes, in multiple files",
@@ -124,7 +124,7 @@
           "reasoningEffort": "xhigh"
         },
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -143,7 +143,7 @@
     "oracle": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -163,7 +163,7 @@
     "prometheus": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -183,7 +183,7 @@
     "sisyphus": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -209,7 +209,7 @@
     "artistry": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -229,7 +229,7 @@
     "deep": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -257,7 +257,7 @@
     "ultrabrain": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -277,7 +277,7 @@
     "unspecified-high": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -311,13 +311,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/deepseek/deepseek-v4-pro",
+      "model": "openrouter/z-ai/glm-5.2",
       "variant": "high"
     },
     "visual-engineering": {
       "fallback_models": [
         {
-          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "model": "openrouter/z-ai/glm-5.2",
           "variant": "high"
         },
         {
@@ -355,7 +355,7 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/deepseek/deepseek-v4-pro",
+      "model": "openrouter/z-ai/glm-5.2",
       "variant": "high"
     }
   },
