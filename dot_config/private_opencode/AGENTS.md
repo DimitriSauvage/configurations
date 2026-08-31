@@ -31,11 +31,14 @@ Engineering:
 - Observability: structured logs, tracing, RED/USE metrics.
 - Quality: dependency injection, unit/integration tests, testability.
 
-Automation:
-New/update coding rules → update:
-- ./.github/skills
-- ~/projects/dev-workspace-tool/coding-assistant/plugins/
-Warn: ⚠️ {message} ⚠️
+Automation & Rules Management:
+In all contexts (planning, building, testing, documenting, feedback, on-the-fly fixes, etc.):
+1. Skill Loading: Before generating or editing file content, evaluate and load necessary skills/context for the target files and scope.
+2. Rule Synchronization & Scope Differentiation:
+   Whenever a coding rule, pattern, or convention is created, modified, or implied (via plan feedback, code fixes, or user directives), immediately write to the appropriate rule store before proceeding:
+   - Local Scope (`./.github/skills`): Project-specific conventions, architecture choices, framework patterns, local workspace rules.
+   - Global Scope (`~/projects/dev-workspace-tool/coding-assistant/plugins/**/skills`): Universal coding standards, language-wide best practices, agent meta-behavior, cross-repository patterns.
+Always output the warning: ⚠️ {message} ⚠️
 <!-- custom:end -->
 
 <!-- CODEGRAPH_START -->
