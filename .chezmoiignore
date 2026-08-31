@@ -156,18 +156,6 @@ out/**
 bin/
 bin/**
 
-# NetBeans
-/nbproject/private/
-/nbproject/private/**
-/nbbuild/
-/nbbuild/**
-/dist/
-/dist/**
-/nbdist/
-/nbdist/**
-/.nb-gradle/
-/.nb-gradle/**
-
 # VS Code
 .vscode/
 .vscode/**

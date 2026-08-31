@@ -28,7 +28,8 @@
         "workflow": "all-agents"
       }
     ],
-    "./plugins/caveman/plugin.js"
+    "./plugins/caveman/plugin.js",
+    "token-optimizer-opencode"
   ],
   "mcp": {
     "context7": {
