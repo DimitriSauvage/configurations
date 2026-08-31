@@ -4,7 +4,7 @@
     "atlas": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -18,13 +18,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "variant": "high"
     },
     "explore": {
       "fallback_models": [
         {
-          "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
+          "model": "openrouter/deepseek/deepseek-v4-pro-0813"
         }
       ],
       "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
@@ -32,7 +32,7 @@
     "librarian": {
       "fallback_models": [
         {
-          "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
+          "model": "openrouter/deepseek/deepseek-v4-pro-0813"
         }
       ],
       "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
@@ -40,7 +40,7 @@
     "hephaestus": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -54,13 +54,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "reasoningEffort": "xhigh"
     },
     "metis": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "reasoningEffort": "high"
         },
         {
@@ -74,13 +74,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "variant": "high"
     },
     "momus": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -94,7 +94,7 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "reasoningEffort": "xhigh"
     },
     "multimodal-looker": {
@@ -103,7 +103,7 @@
           "model": "openrouter/minimax/minimax-m3"
         },
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "reasoningEffort": "high"
         },
         {
@@ -114,17 +114,17 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2"
+      "model": "openrouter/~z-ai/glm-latest"
     },
     "OpenCode-Builder": {
       "description": "As soon as possible, act as an orchestrator and use sub agents to parallelize tasks. If the task is a quick fix, do it. If it requires multiple changes, in multiple files",
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "reasoningEffort": "xhigh"
         },
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -143,7 +143,7 @@
     "oracle": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -157,13 +157,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "reasoningEffort": "xhigh"
     },
     "prometheus": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -177,13 +177,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "reasoningEffort": "xhigh"
     },
     "sisyphus": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -197,10 +197,10 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "variant": "xhigh",
       "ultrawork": {
-        "model": "openrouter/z-ai/glm-5.2",
+        "model": "openrouter/~z-ai/glm-latest",
         "variant": "xhigh"
       }
     }
@@ -209,7 +209,7 @@
     "artistry": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -223,13 +223,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "reasoningEffort": "xhigh"
     },
     "deep": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -243,13 +243,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "reasoningEffort": "xhigh"
     },
     "quick": {
       "fallback_models": [
         {
-          "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
+          "model": "openrouter/deepseek/deepseek-v4-pro-0813"
         }
       ],
       "model": "openrouter/~deepseek/deepseek-v4-flash-latest"
@@ -257,7 +257,7 @@
     "ultrabrain": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -271,13 +271,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "reasoningEffort": "xhigh"
     },
     "unspecified-high": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -291,13 +291,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "reasoningEffort": "xhigh"
     },
     "unspecified-low": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "reasoningEffort": "high"
         },
         {
@@ -311,13 +311,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "variant": "high"
     },
     "visual-engineering": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "variant": "high"
         },
         {
@@ -335,13 +335,13 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "reasoningEffort": "xhigh"
     },
     "writing": {
       "fallback_models": [
         {
-          "model": "openrouter/z-ai/glm-5.2",
+          "model": "openrouter/~z-ai/glm-latest",
           "reasoningEffort": "high"
         },
         {
@@ -355,7 +355,7 @@
           "variant": "high"
         }
       ],
-      "model": "openrouter/z-ai/glm-5.2",
+      "model": "openrouter/~z-ai/glm-latest",
       "variant": "high"
     }
   },
