@@ -1,4 +1,5 @@
-tap "1jehuang/jcode", trusted: true
+tap "1jehuang/jcode"
+tap "alexsjones/llmfit", "https://github.com/AlexsJones/homebrew-llmfit"
 tap "anomalyco/tap"
 tap "atlassian/acli", trusted: true
 tap "jetpackduba/apps", trusted: true
@@ -6,6 +7,8 @@ tap "rtk-ai/tap", trusted: true
 tap "superset-sh/tap"
 tap "tabularisdb/tabularis", "https://github.com/TabularisDB/homebrew-tabularis"
 tap "tilt-dev/tap", trusted: true
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -34,20 +37,16 @@ brew "pipx"
 brew "pnpm"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
-# CLI proxy to minimize LLM token consumption
-brew "rtk"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # CLI for Git worktree management, designed for parallel AI agent workflows
 brew "worktrunk"
 # UNIX shell (command interpreter)
 brew "zsh"
-# AI coding agent powered by Claude and ChatGPT
-brew "1jehuang/jcode/jcode"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode", trusted: true
 # CLI and host-service for Superset
-brew "superset-sh/tap/superset", trusted: true
+brew "superset-sh/tap/superset", link: false, trusted: true
 # A dev environment as code for microservice apps
 brew "tilt-dev/tap/tilt", trusted: true
 # Enable Windows-like alt-tab
@@ -76,10 +75,6 @@ cask "taphouse"
 cask "visual-studio-code"
 vscode "gitwand.gitwand-vscode"
 vscode "saoudrizwan.claude-dev"
-npm "@alibaba-group/open-code-review"
-npm "@biomejs/biome"
-npm "@colbymchenry/codegraph"
 npm "corepack"
-npm "install"
-npm "typescript-language-server"
-npm "typescript"
+npm "opkg"
+npm "picocolors"
