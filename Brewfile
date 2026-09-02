@@ -33,8 +33,6 @@ brew "mkcert"
 brew "nss"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Fast, disk space efficient package manager
-brew "pnpm"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Extremely fast Python package installer and resolver, written in Rust
