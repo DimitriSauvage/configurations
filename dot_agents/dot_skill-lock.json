@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "skills": {
+    "plannotator-compound": {
+      "source": "backnotprop/plannotator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
+      "skillPath": "apps/skills/extra/plannotator-compound/SKILL.md",
+      "skillFolderHash": "e7cb3bf5836705facedb2f94c6648f269d3f0748",
+      "installedAt": "2026-06-10T14:59:56.260Z",
+      "updatedAt": "2026-06-10T14:59:56.260Z"
+    },
+    "plannotator-setup-goal": {
+      "source": "backnotprop/plannotator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
+      "skillPath": "apps/skills/extra/plannotator-setup-goal/SKILL.md",
+      "skillFolderHash": "29d5d60c2b8a88c1786d7bbdbbfa37e44b64f6a5",
+      "installedAt": "2026-06-10T14:59:56.263Z",
+      "updatedAt": "2026-06-10T14:59:56.263Z"
+    },
+    "plannotator-visual-explainer": {
+      "source": "backnotprop/plannotator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
+      "skillPath": "apps/skills/extra/plannotator-visual-explainer/SKILL.md",
+      "skillFolderHash": "a48af6a5c5e110a538af6174f485cfd4e5b9d276",
+      "installedAt": "2026-06-10T14:59:56.264Z",
+      "updatedAt": "2026-06-10T14:59:56.264Z"
+    },
+    "cavecrew": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/cavecrew/SKILL.md",
+      "skillFolderHash": "326ab384eb445cc0a74608d6f0c0abe6558bb44a",
+      "installedAt": "2026-06-12T10:14:36.156Z",
+      "updatedAt": "2026-07-21T09:48:23.528Z"
+    },
+    "caveman": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman/SKILL.md",
+      "skillFolderHash": "166040c027f7764d43df36abc5df0079bfc6394b",
+      "installedAt": "2026-06-12T10:14:36.158Z",
+      "updatedAt": "2026-07-21T09:48:23.530Z"
+    },
+    "caveman-commit": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-commit/SKILL.md",
+      "skillFolderHash": "6ba13fa3503e9607eed8f94828b524510d83b7ef",
+      "installedAt": "2026-06-12T10:14:36.158Z",
+      "updatedAt": "2026-07-21T09:48:23.530Z"
+    },
+    "caveman-compress": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-compress/SKILL.md",
+      "skillFolderHash": "1284ac809fbdaeb9e871f84ee850aebe10c85030",
+      "installedAt": "2026-06-12T10:14:36.159Z",
+      "updatedAt": "2026-07-21T09:48:23.531Z"
+    },
+    "caveman-help": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-help/SKILL.md",
+      "skillFolderHash": "91d43545d1f02e9ef95051b42ee562867362fe6e",
+      "installedAt": "2026-06-12T10:14:36.159Z",
+      "updatedAt": "2026-06-12T10:28:15.783Z"
+    },
+    "caveman-review": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-review/SKILL.md",
+      "skillFolderHash": "2d9762b7aec395b9713fde57fb8965bc3bbd2c3f",
+      "installedAt": "2026-06-12T10:14:36.159Z",
+      "updatedAt": "2026-06-12T10:28:15.784Z"
+    },
+    "caveman-stats": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-stats/SKILL.md",
+      "skillFolderHash": "62b175240e2851f0b9be4f279737cbd74ed2e769",
+      "installedAt": "2026-06-12T10:14:36.159Z",
+      "updatedAt": "2026-06-12T10:28:15.784Z"
+    },
+    "old-coder": {
+      "source": "amazingang/old-coder",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/amazingang/old-coder.git",
+      "skillPath": "skills/old-coder/SKILL.md",
+      "skillFolderHash": "f56eaa483fd7c49ca6b35f3d8db87efc0cd95f79",
+      "installedAt": "2026-08-31T08:24:39.055Z",
+      "updatedAt": "2026-08-31T08:24:39.055Z"
+    },
+    "old-coder-api": {
+      "source": "amazingang/old-coder",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/amazingang/old-coder.git",
+      "skillPath": "skills/old-coder-api/SKILL.md",
+      "skillFolderHash": "bd9418dddaa63e62c36a8890220263ae1c31191c",
+      "installedAt": "2026-08-31T08:24:52.861Z",
+      "updatedAt": "2026-08-31T08:24:52.861Z"
+    },
+    "adhd": {
+      "source": "UditAkhourii/adhd",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/UditAkhourii/adhd.git",
+      "skillPath": "skills/adhd/SKILL.md",
+      "skillFolderHash": "20295ca5b738965bcae4385db387faf2bfb8fc1e",
+      "installedAt": "2026-09-01T12:59:28.699Z",
+      "updatedAt": "2026-09-01T12:59:28.699Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed"
+  ]
+}
