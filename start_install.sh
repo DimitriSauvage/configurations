@@ -12,14 +12,10 @@ if [ "$(uname -s)" = "Linux" ] && command -v apt-get >/dev/null 2>&1; then
 fi
 
 info "Homebrew"
-if ! command -v brew >/dev/null 2>&1; then
-  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
-[ -x /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
-[ -x /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 info "Outils (Brewfile)"
-brew bundle --file="{{ .chezmoi.sourceDir }}/Brewfile" || true
+brew bundle install
 
 
 info "Zsh par défaut"
@@ -27,8 +23,15 @@ if [ "$(basename "${SHELL:-}")" != "zsh" ] && command -v zsh >/dev/null 2>&1; th
   chsh -s "$(command -v zsh)" || echo "Change ton shell manuellement : chsh -s $(command -v zsh)"
 fi
 
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yparent
-chezmoi apply init --apply -v $USER
+sh -c "$(curl -fsLS get.chezmoi.io)"
+# Initialize the normal chezmoi source directory
+chezmoi init
+
+# Copy your repository's contents into it
+cp -a . "$(chezmoi source-path)/"
+
+# Apply everything
+chezmoi apply -v
 
 mise install
 
