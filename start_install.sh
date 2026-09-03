@@ -25,10 +25,7 @@ fi
 
 sh -c "$(curl -fsLS get.chezmoi.io)"
 # Initialize the normal chezmoi source directory
-chezmoi init
-
-# Copy your repository's contents into it
-cp -a . "$(chezmoi source-path)/"
+chezmoi init https://github.com/DimitriSauvage/configurations
 
 # Apply everything
 chezmoi apply -v
@@ -36,3 +33,6 @@ chezmoi apply -v
 mise install
 
 info "Terminé. Ouvre un nouveau terminal."
+
+# Plannotator
+curl -fsSL https://plannotator.ai/install.sh | bash
