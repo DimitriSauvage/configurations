@@ -26,9 +26,6 @@
 		git tag -a \"$tag\" -m \"$msg\" && git push origin \"$tag\"; \
 		fi; \
 	}; f"
-[user]
-	name = {{ .name }}
-	email = {{ .email }}
 [core]
 	editor = nano
 	excludesfile = {{.chezmoi.homeDir}}/.gitignore
@@ -77,3 +74,11 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[includeIf "gitdir:~/projects"]
+    path = ~/.gitconfig-professional
+
+[includeIf "gitdir:~/projects-perso"]
+    path = ~/.gitconfig-personal
+[includeIf "gitdir:~/.local/share/chezmoi"]
+    path = ~/.gitconfig-personal
