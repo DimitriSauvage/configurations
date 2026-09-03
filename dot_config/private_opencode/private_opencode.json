@@ -19,17 +19,17 @@
     ]
   },
   "plugin": [
-    "@mohak34/opencode-notifier@latest",
     "context-mode",
     "@dietrichgebert/ponytail",
+    "./plugins/caveman/plugin.js",
+    "token-optimizer-opencode",
     [
       "@plannotator/opencode@latest",
       {
         "workflow": "all-agents"
       }
     ],
-    "./plugins/caveman/plugin.js",
-    "token-optimizer-opencode"
+    "oh-my-openagent@latest"
   ],
   "mcp": {
     "context7": {
