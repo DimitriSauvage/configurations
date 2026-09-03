@@ -36,3 +36,7 @@ info "Terminé. Ouvre un nouveau terminal."
 
 # Plannotator
 curl -fsSL https://plannotator.ai/install.sh | bash
+
+# CodeGraph
+npm i -g @colbymchenry/codegraph
+/bin/bash -c "codegraph install"
