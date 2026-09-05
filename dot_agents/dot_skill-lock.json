@@ -117,6 +117,25 @@
       "skillFolderHash": "20295ca5b738965bcae4385db387faf2bfb8fc1e",
       "installedAt": "2026-09-01T12:59:28.699Z",
       "updatedAt": "2026-09-01T12:59:28.699Z"
+    },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/blader/humanizer.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
+      "pluginName": "humanizer",
+      "installedAt": "2026-09-05T11:39:42.163Z",
+      "updatedAt": "2026-09-05T11:39:42.163Z"
+    },
+    "last30days": {
+      "source": "mvanhorn/last30days-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mvanhorn/last30days-skill.git",
+      "skillPath": "skills/last30days/SKILL.md",
+      "skillFolderHash": "8ad480e1d12578bb4ce787653cae761136ec0b2a",
+      "installedAt": "2026-09-05T11:41:23.884Z",
+      "updatedAt": "2026-09-05T11:41:23.884Z"
     }
   },
   "dismissed": {

@@ -169,7 +169,7 @@ ehthumbs.db
 Desktop.ini
 
 # OhMyOpenAgent
-.omo/
+!.omo/omo.jsonc
 .omo/**
 
 # headroom

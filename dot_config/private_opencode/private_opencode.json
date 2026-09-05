@@ -77,7 +77,23 @@
   "provider": {
     "openrouter": {
       "models": {
-        "openrouter/auto-beta": {}
+        "openrouter/auto-beta": {},
+        "openrouter/~z-ai/glm-flash-latest": {}
+      }
+    },
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "qwen3.5:9b-mlx": {
+          "name": "Qwen 3.5 9B (SM Tasks)"
+        },
+        "qwen3.8:27b-mlx": {
+          "name": "Qwen 3.8 (Big tasks)"
+        }
       }
     }
   }
