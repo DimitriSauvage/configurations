@@ -8,5 +8,9 @@
   },
   "prompt": {
     "max_width": "auto"
-  }
+  },
+  "attention": {
+    "enabled": true,
+    "notifications": true,
+  },
 }
