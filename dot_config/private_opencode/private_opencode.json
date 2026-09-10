@@ -70,7 +70,7 @@
   "share": "manual",
   "autoupdate": true,
   "experimental": {
-    "disable_paste_summary": true
+    "disable_paste_summary": true,
   },
   "provider": {
     "openrouter": {
