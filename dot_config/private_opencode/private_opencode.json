@@ -51,6 +51,17 @@
         "@playwright/mcp@latest"
       ],
       "enabled": false
+    },
+    "gitwand": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@gitwand/mcp",
+        "--cwd",
+        "$PWD"
+      ],
+      "enabled": false
     }
   },
   "watcher": {
@@ -86,12 +97,15 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
+        "qwen2.5-coder:3b": {
+          "name": "Qwen 2.5 Coder 3B (XS Tasks)"
+        },
         "qwen3.5:9b-mlx": {
           "name": "Qwen 3.5 9B (SM Tasks)"
         },
         "qwen3.8:27b-mlx": {
-          "name": "Qwen 3.8 (Big tasks)"
-        }
+          "name": "Qwen 3.8 27B (Big tasks)"
+        },
       }
     }
   }
