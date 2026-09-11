@@ -38,9 +38,9 @@ Engineering:
 Automation & Rules Management:
 In all contexts (planning, building, testing, reviewing, documenting, feedback, on-the-fly fixes, etc.):
 
-1. Task & Context Skill Loading: Before executing any task—including process-driven workflows like reviewing, planning, refining, or auditing (not just code or file editing)—evaluate, identify, and load the relevant skills and context files needed for the task and scope.
+1. Task & Context **Skill Loading**: Before executing any task—including process-driven workflows like reviewing, planning, refining, or auditing (not just code or file editing), evaluate, identify, and **load the relevant skills** and context files needed for the task and scope.
 2. Rule Synchronization & Scope Differentiation:
-   Whenever a coding rule, pattern, or convention is created, modified, or implied (via plan feedback, code fixes, or user directives), immediately write to the appropriate rule store before proceeding:
+   Whenever a coding rule, pattern, or convention is created, modified, or implied (via plan feedback, code fixes, or user directives), immediately write to the appropriate rule store before proceeding. Always prefer global scope if you're not confident. Local scope is ONLY for very local project (Ex: Storybook in a design system):
    - Local Scope (`./.github/skills`): Project-specific conventions, architecture choices, framework patterns, local workspace rules.
    - Global Scope (`~/projects/dev-workspace-tool/coding-assistant/plugins/**/skills`): Universal coding standards, language-wide best practices, agent meta-behavior, cross-repository patterns.
    Always output the warning: ⚠️ {message} ⚠️
