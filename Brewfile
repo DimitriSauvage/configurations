@@ -4,7 +4,6 @@ tap "anomalyco/tap"
 tap "atlassian/acli", trusted: true
 tap "jetpackduba/apps", trusted: true
 tap "rtk-ai/tap", trusted: true
-tap "superset-sh/tap"
 tap "tabularisdb/tabularis", "https://github.com/TabularisDB/homebrew-tabularis"
 tap "tilt-dev/tap", trusted: true
 # Static checker for GitHub Actions workflow files
@@ -63,8 +62,6 @@ brew "node"
 brew "nss"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Fast, disk space efficient package manager
-brew "pnpm", link: false
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Search tool like grep and The Silver Searcher
@@ -89,8 +86,6 @@ brew "zoxide"
 brew "zsh"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode", trusted: true
-# CLI and host-service for Superset
-brew "superset-sh/tap/superset", link: false, trusted: true
 # A dev environment as code for microservice apps
 brew "tilt-dev/tap/tilt", trusted: true
 # Enable Windows-like alt-tab
@@ -120,8 +115,6 @@ cask "raycast"
 cask "slack"
 # Music streaming service
 cask "spotify"
-# Terminal for orchestrating agents
-cask "superset"
 # Lightweight, developer-focused database management tool
 cask "tabularisdb/tabularis/tabularis", trusted: true
 # Native GUI for Homebrew package management
