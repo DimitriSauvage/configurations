@@ -1,32 +1,4 @@
-# ==========================================
-
-# GitHub personnel
-
-# ==========================================
-
-Host github.com-personal
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_github_personal
-    IdentitiesOnly yes
-    AddKeysToAgent yes
-    UseKeychain yes
-
-# ==========================================
-
-# GitHub professionnel # Default
-
-# ==========================================
-
 Host github.com
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_github_professional
-    IdentitiesOnly yes
-    AddKeysToAgent yes
-    UseKeychain yes
-
-Host github.com-professional
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_ed25519_github_professional
