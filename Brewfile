@@ -7,6 +7,8 @@ tap "rtk-ai/tap", trusted: true
 tap "superset-sh/tap"
 tap "tabularisdb/tabularis", "https://github.com/TabularisDB/homebrew-tabularis"
 tap "tilt-dev/tap", trusted: true
+# Static checker for GitHub Actions workflow files
+brew "actionlint"
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
 # Official Amazon AWS command-line interface
@@ -102,6 +104,10 @@ cask "ghostty"
 cask "google-drive"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# Software for Logitech devices
+cask "logi-options+"
+# Get up and running with large language models locally
+cask "ollama-app"
 # Client program for the OpenVPN Access Server
 cask "openvpn-connect"
 # Replacement for Docker Desktop
@@ -124,4 +130,6 @@ cask "taphouse"
 cask "visual-studio-code"
 vscode "gitwand.gitwand-vscode"
 vscode "saoudrizwan.claude-dev"
+npm "@colbymchenry/codegraph"
+npm "@gitwand/cli"
 npm "corepack"
