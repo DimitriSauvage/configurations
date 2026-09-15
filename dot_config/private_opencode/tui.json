@@ -11,6 +11,6 @@
   },
   "attention": {
     "enabled": true,
-    "notifications": true,
-  },
+    "notifications": true
+  }
 }
