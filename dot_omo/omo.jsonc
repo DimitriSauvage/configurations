@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
+  "profiles": {},
+  "model_profile": "openrouter/~deepseek/deepseek-pro-latest",
+  // --------------------------------------------------------
+  // TASK CATEGORIES (Intent-based routing)
+  // --------------------------------------------------------
+  "categories": {
+    // High Intelligence Tasks
+    "ultrabrain": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "reasoning": "max",
+      "description": "Hard logic, complex architectural decisions, and heavy refactoring.",
+    },
+    "deep": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "reasoning": "max",
+      "description": "Autonomous multi-step problem solving requiring deep analytical effort.",
+    },
+    "artistry": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "reasoning": "max",
+      "description": "Creative problem-solving and novel architectural patterns.",
+    },
+    "visual-engineering": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "reasoning": "max",
+      "description": "Frontend, UI/UX, styling layout logic, and animation flow.",
+    },
+    "unspecified-high": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "reasoning": "max",
+      "description": "General tasks fallback requiring high effort.",
+    },
+    // Fast / Low Intelligence Tasks
+    "quick": {
+      "model": "openrouter/~deepseek/deepseek-v4-flash-latest",
+      "reasoning": "default",
+      "description": "Trivial edits, single-file fixes, and high-speed execution.",
+    },
+    "writing": {
+      "model": "openrouter/~deepseek/deepseek-v4-flash-latest",
+      "reasoning": "default",
+      "description": "Documentation updates, technical prose, and commit logs.",
+    },
+    "unspecified-low": {
+      "model": "openrouter/~deepseek/deepseek-v4-flash-latest",
+      "reasoning": "default",
+      "description": "General tasks fallback requiring low effort.",
+    },
+  },
+  // --------------------------------------------------------
+  // SPECIALIZED AGENTS
+  // --------------------------------------------------------
+  "agents": {
+    // Main Session Orchestrator
+    "sisyphus": {
+      "model": "openrouter/~deepseek/deepseek-pro-latest",
+      "description": "Main session orchestrator. Coordinates tasks, manages context, and delegates.",
+    },
+    // High Intelligence (Critics, Planners & Consultants)
+    "plan-consultant": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "reasoning": "max",
+      "description": "Gap analyzer. Identifies ambiguities and hidden assumptions in plans.",
+    },
+    "plan-reviewer": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "reasoning": "max",
+      "description": "One-shot reviewer validating work plans against scope and clarity.",
+    },
+    "oracle": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "reasoning": "max",
+      "description": "High-level architectural guide and system design critic.",
+    },
+    // Low Intelligence / Fast Research
+    "explore": {
+      "model": "openrouter/~deepseek/deepseek-v4-flash-latest",
+      "reasoning": "default",
+      "description": "Fast codebase grep, symbol tracing, and pattern discovery.",
+    },
+    "librarian": {
+      "model": "openrouter/~deepseek/deepseek-v4-flash-latest",
+      "reasoning": "default",
+      "description": "External documentation and open-source codebase reference search.",
+    },
+  },
+  // --------------------------------------------------------
+  // HARNESS OVERRIDES: OPENCODE PLUGIN
+  // --------------------------------------------------------
+  "[opencode]": {
+    "background_tasks": {
+      "enabled": true,
+    },
+    "tmux": {
+      "enabled": true,
+    },
+    "git_master": {
+      "enabled": true,
+      "commit_footer": true,
+    },
+    "hooks": {
+      "disabled_hooks": [],
+    },
+    "browser_automation_engine": {
+      "playwright_mcp_args": [],
+    },
+  },
+}

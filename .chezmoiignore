@@ -169,8 +169,12 @@ ehthumbs.db
 Desktop.ini
 
 # OhMyOpenAgent
-!.omo/omo.jsonc
-.omo/**
+# Ignore every nested .omo directory (tooling artifacts), but keep ~/.omo managed.
+# `!` excludes always win over includes, so the two !.omo lines re-allow the root dir.
+**/.omo
+**/.omo/**
+!.omo
+!.omo/**
 
 # headroom
 .serena/
