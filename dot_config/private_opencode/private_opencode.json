@@ -86,8 +86,9 @@
       "models": {
         "openrouter/auto-beta": {},
         "openrouter/~deepseek/deepseek-flash-latest": {},
-        "openrouter/z-ai/glm-5.3": {},
-        "openrouter/z-ai/glm-5.3-flash": {}
+        "openrouter/~deepseek/deepseek-pro-latest": {},
+        "openrouter/~z-ai/glm-latest": {},
+        "openrouter/~z-ai/glm-flash-latest": {}
       }
     },
     "ollama": {
