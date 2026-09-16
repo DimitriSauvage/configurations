@@ -93,6 +93,20 @@
       "reasoning": "default",
       "description": "External documentation and open-source codebase reference search.",
     },
+    "hephaestus": {
+      "model": "openrouter/~deepseek/deepseek-pro-latest",
+    },
+    "metis": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "variant": "max",
+    },
+    "momus": {
+      "model": "openrouter/~z-ai/glm-latest",
+      "variant": "max",
+    },
+    "multimodal-looker": {
+      "model": "openrouter/~z-ai/glm-flash-latest",
+    },
   },
   // --------------------------------------------------------
   // HARNESS OVERRIDES: OPENCODE PLUGIN
