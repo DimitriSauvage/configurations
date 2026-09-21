@@ -1,0 +1,65 @@
+{
+    "notificationSystem": "ghostty",
+    "events": {
+        "permission": {
+            "sound": true,
+            "notification": true,
+            "command": true,
+            "bell": false
+        },
+        "complete": {
+            "sound": true,
+            "notification": true,
+            "command": true,
+            "bell": false
+        },
+        "subagent_complete": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        },
+        "error": {
+            "sound": true,
+            "notification": true,
+            "command": true,
+            "bell": false
+        },
+        "question": {
+            "sound": true,
+            "notification": true,
+            "command": true,
+            "bell": false
+        },
+        "user_cancelled": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        },
+        "plan_exit": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        },
+        "session_started": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        },
+        "user_message": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        },
+        "client_connected": {
+            "sound": false,
+            "notification": false,
+            "command": true,
+            "bell": false
+        }
+    }
+}
