@@ -1,0 +1,7 @@
+{
+  "name": "omp-plugins",
+  "private": true,
+  "dependencies": {
+    "@plannotator/pi-extension": "npm:@plannotator/pi-extension@^0.27.17"
+  }
+}

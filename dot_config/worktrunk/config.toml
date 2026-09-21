@@ -110,8 +110,8 @@ command = "ollama run commit-bot -"
 #
 # Shared by `wt step commit`, `wt step squash`, and `wt merge`.
 #
-# [commit]
-# stage = "all"      # What to stage before commit: "all", "tracked", or "none"
+[commit]
+stage = "all"      # What to stage before commit: "all", "tracked", or "none"
 #
 # ### Merge
 #

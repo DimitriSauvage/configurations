@@ -7,6 +7,7 @@ alias asdf="mise"
 alias dev="cd $DEV_FOLDER"
 alias ls="ls -la --color=auto"
 alias doc="code ~/Google\ Drive/My\ Drive/Notes"
+alias omp="EDITOR=nano omp"
 
 
 # =========================

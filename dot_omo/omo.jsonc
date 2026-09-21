@@ -7,22 +7,22 @@
   "categories": {
     // High Intelligence (architecture, hard logic)
     "ultrabrain": {
-      "model": "openrouter/~z-ai/glm-latest",
+      "model": "openrouter/~deepseek/deepseek-pro-latest",
       "reasoning": "max",
       "description": "Hard logic, complex architectural decisions, and heavy refactoring.",
     },
     "deep": {
-      "model": "openrouter/~z-ai/glm-latest",
+      "model": "openrouter/~z-ai/glm-flash-latest",
       "reasoning": "max",
       "description": "Autonomous multi-step problem solving requiring deep analytical effort.",
     },
     "artistry": {
-      "model": "openrouter/~z-ai/glm-latest",
+      "model": "openrouter/~z-ai/glm-flash-latest",
       "reasoning": "max",
       "description": "Creative problem-solving and novel architectural patterns.",
     },
     "unspecified-high": {
-      "model": "openrouter/~z-ai/glm-latest",
+      "model": "openrouter/~z-ai/glm-flash-latest",
       "reasoning": "max",
       "description": "General tasks fallback requiring high effort.",
     },
@@ -59,7 +59,7 @@
       "description": "Main session orchestrator. Coordinates tasks, manages context, and delegates.",
     },
     "prometheus": {
-      "model": "openrouter/~z-ai/glm-latest",
+      "model": "openrouter/~deepseek/deepseek-flash-latest",
       "reasoning": "max",
       "description": "Strategic planner and work plan builder.",
     },

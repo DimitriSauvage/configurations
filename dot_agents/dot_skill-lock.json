@@ -1,32 +1,14 @@
 {
   "version": 3,
   "skills": {
-    "plannotator-compound": {
-      "source": "backnotprop/plannotator",
+    "adhd": {
+      "source": "UditAkhourii/adhd",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
-      "skillPath": "apps/skills/extra/plannotator-compound/SKILL.md",
-      "skillFolderHash": "e7cb3bf5836705facedb2f94c6648f269d3f0748",
-      "installedAt": "2026-06-10T14:59:56.260Z",
-      "updatedAt": "2026-06-10T14:59:56.260Z"
-    },
-    "plannotator-setup-goal": {
-      "source": "backnotprop/plannotator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
-      "skillPath": "apps/skills/extra/plannotator-setup-goal/SKILL.md",
-      "skillFolderHash": "29d5d60c2b8a88c1786d7bbdbbfa37e44b64f6a5",
-      "installedAt": "2026-06-10T14:59:56.263Z",
-      "updatedAt": "2026-06-10T14:59:56.263Z"
-    },
-    "plannotator-visual-explainer": {
-      "source": "backnotprop/plannotator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
-      "skillPath": "apps/skills/extra/plannotator-visual-explainer/SKILL.md",
-      "skillFolderHash": "a48af6a5c5e110a538af6174f485cfd4e5b9d276",
-      "installedAt": "2026-06-10T14:59:56.264Z",
-      "updatedAt": "2026-06-10T14:59:56.264Z"
+      "sourceUrl": "https://github.com/UditAkhourii/adhd.git",
+      "skillPath": "skills/adhd/SKILL.md",
+      "skillFolderHash": "20295ca5b738965bcae4385db387faf2bfb8fc1e",
+      "installedAt": "2026-09-01T12:59:28.699Z",
+      "updatedAt": "2026-09-01T12:59:28.699Z"
     },
     "cavecrew": {
       "source": "JuliusBrussee/caveman",
@@ -91,6 +73,33 @@
       "installedAt": "2026-06-12T10:14:36.159Z",
       "updatedAt": "2026-06-12T10:28:15.784Z"
     },
+    "gh-stack": {
+      "source": "github/gh-stack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/gh-stack.git",
+      "skillPath": "skills/gh-stack/SKILL.md",
+      "skillFolderHash": "6bfe555e89a6b264e09d5ece7c4040226458c8e5",
+      "installedAt": "2026-09-16T12:25:30Z",
+      "updatedAt": "2026-09-16T12:25:30Z"
+    },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/blader/humanizer.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
+      "installedAt": "2026-09-05T11:39:42.163Z",
+      "updatedAt": "2026-09-05T11:39:42.163Z"
+    },
+    "last30days": {
+      "source": "mvanhorn/last30days-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mvanhorn/last30days-skill.git",
+      "skillPath": "skills/last30days/SKILL.md",
+      "skillFolderHash": "8ad480e1d12578bb4ce787653cae761136ec0b2a",
+      "installedAt": "2026-09-05T11:41:23.884Z",
+      "updatedAt": "2026-09-05T11:41:23.884Z"
+    },
     "old-coder": {
       "source": "amazingang/old-coder",
       "sourceType": "github",
@@ -109,51 +118,35 @@
       "installedAt": "2026-08-31T08:24:52.861Z",
       "updatedAt": "2026-08-31T08:24:52.861Z"
     },
-    "adhd": {
-      "source": "UditAkhourii/adhd",
+    "plannotator-compound": {
+      "source": "backnotprop/plannotator",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/UditAkhourii/adhd.git",
-      "skillPath": "skills/adhd/SKILL.md",
-      "skillFolderHash": "20295ca5b738965bcae4385db387faf2bfb8fc1e",
-      "installedAt": "2026-09-01T12:59:28.699Z",
-      "updatedAt": "2026-09-01T12:59:28.699Z"
+      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
+      "skillPath": "apps/skills/extra/plannotator-compound/SKILL.md",
+      "skillFolderHash": "e7cb3bf5836705facedb2f94c6648f269d3f0748",
+      "installedAt": "2026-06-10T14:59:56.260Z",
+      "updatedAt": "2026-06-10T14:59:56.260Z"
     },
-    "humanizer": {
-      "source": "blader/humanizer",
+    "plannotator-setup-goal": {
+      "source": "backnotprop/plannotator",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/blader/humanizer.git",
-      "skillPath": "SKILL.md",
-      "skillFolderHash": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
-      "pluginName": "humanizer",
-      "installedAt": "2026-09-05T11:39:42.163Z",
-      "updatedAt": "2026-09-05T11:39:42.163Z"
+      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
+      "skillPath": "apps/skills/extra/plannotator-setup-goal/SKILL.md",
+      "skillFolderHash": "29d5d60c2b8a88c1786d7bbdbbfa37e44b64f6a5",
+      "installedAt": "2026-06-10T14:59:56.263Z",
+      "updatedAt": "2026-06-10T14:59:56.263Z"
     },
-    "last30days": {
-      "source": "mvanhorn/last30days-skill",
+    "plannotator-visual-explainer": {
+      "source": "backnotprop/plannotator",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/mvanhorn/last30days-skill.git",
-      "skillPath": "skills/last30days/SKILL.md",
-      "skillFolderHash": "8ad480e1d12578bb4ce787653cae761136ec0b2a",
-      "installedAt": "2026-09-05T11:41:23.884Z",
-      "updatedAt": "2026-09-05T11:41:23.884Z"
+      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
+      "skillPath": "apps/skills/extra/plannotator-visual-explainer/SKILL.md",
+      "skillFolderHash": "a48af6a5c5e110a538af6174f485cfd4e5b9d276",
+      "installedAt": "2026-06-10T14:59:56.264Z",
+      "updatedAt": "2026-06-10T14:59:56.264Z"
     }
   },
   "dismissed": {
     "findSkillsPrompt": true
-  },
-  "lastSelectedAgents": [
-    "amp",
-    "antigravity",
-    "antigravity-cli",
-    "cline",
-    "codex",
-    "cursor",
-    "deepagents",
-    "gemini-cli",
-    "github-copilot",
-    "kimi-code-cli",
-    "opencode",
-    "warp",
-    "zed"
-  ]
+  }
 }

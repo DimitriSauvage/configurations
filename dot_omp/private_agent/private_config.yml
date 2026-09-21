@@ -1,0 +1,67 @@
+providers:
+  webSearchOrder:
+    []
+  autoThinkingModel: online
+  autoThinkingMaxEffort: max
+setupVersion: 2
+theme:
+  dark: dark-github
+  light: light
+colorBlindMode: false
+composer:
+  shape: pi
+  tokenRate: true
+statusLine:
+  preset: default
+  sessionAccent: true
+  separator: powerline
+  transparent: false
+  compactThinkingLevel: true
+  showHookStatus: true
+tui:
+  hyperlinks: auto
+terminal:
+  showProgress: true
+defaultThinkingLevel: auto
+hideThinkingBlock: false
+proseOnlyThinking: false
+cycleOrder:
+  - smol
+  - default
+  - slow
+  - plan
+modelRoles:
+  default: openrouter/~deepseek/deepseek-v4-flash-latest:max
+  smol: openrouter/~z-ai/glm-flash-latest:auto
+  slow: openrouter/~deepseek/deepseek-v4-flash-latest:max
+  commit: ollama/commit-bot:latest
+  vision: openrouter/qwen/qwen3.8-max:auto
+  task: openrouter/~z-ai/glm-flash-latest:auto
+  tiny: openrouter/~z-ai/glm-flash-latest:auto
+  plan: openrouter/~deepseek/deepseek-v4-flash-latest:max
+  advisor: openrouter/~deepseek/deepseek-v4-flash-latest:auto
+autolearn:
+  enabled: true
+skills:
+  customDirectories:
+    - ~/.config/opencode/skills
+memory:
+  backend: "off"
+paste:
+  largeMenuThreshold: 100
+advisor:
+  enabled: true
+steeringMode: all
+interruptMode: immediate
+plan:
+  defaultOnStartup: false
+task:
+  eager: always
+  enableLsp: true
+  maxRecursionDepth: 3
+  isolation:
+    enabled: true
+isolation:
+  backend: auto
+commands:
+  enableOpencodeUser: false
