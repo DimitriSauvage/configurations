@@ -20,9 +20,6 @@ eval "$(mise activate zsh)"
 # =========================
 setopt glob_dots # Inclure les fichiers commençant par un point dans les expansions de chemin
 
-# Temp files cleanup
-rm -f /private/var/folders/02/2pc468ld3p1810ss1k7fd7zc0000gn/T/opencode-wal-*(N)
-
 # =========================
 # Company specific settings
 # =========================

@@ -26,6 +26,7 @@
 		git tag -a \"$tag\" -m \"$msg\" && git push origin \"$tag\"; \
 		fi; \
 	}; f"
+	sync-all = "!npx tsx ~/git-sync-all.ts"
 [core]
 	editor = nano
 	excludesfile = {{.chezmoi.homeDir}}/.gitignore

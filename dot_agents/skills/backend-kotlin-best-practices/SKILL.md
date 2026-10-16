@@ -338,7 +338,6 @@ Library: `io.github.oshai:kotlin-logging-jvm:7.0.x`
 
 - **ktlint via Spotless** with `spotless:check` bound at the `validate` phase — formatting is a build gate, not a suggestion. `spotless:apply` fixes locally; the build fails on drift.
 - **Imports explicit and ordered, no wildcards** (ktlint-enforced).
-- **No fully-qualified type names in code — import them.** `fun com.example.X.f()` → `import com.example.X` + `fun X.f()`. Exception: naming collision → `import com.a.X as Y` alias (fall back to the FQN only when an alias reads worse). KDoc `[fully.qualified.Type]` links and ArchUnit package strings are not code references and stay as-is.
 - **`Xjsr305=strict` compiler flag** — strict JSR-305 nullability analysis for Java interop.
 
 ---

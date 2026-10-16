@@ -25,8 +25,7 @@
       "command": "npx",
       "args": [
         "@playwright/mcp@latest"
-      ],
-      "enabled": false
+      ]
     },
     "gitwand": {
       "type": "stdio",
@@ -36,8 +35,7 @@
         "@gitwand/mcp",
         "--cwd",
         "$PWD"
-      ],
-      "enabled": false
+      ]
     },
     "context7": {
       "type": "http",
@@ -46,6 +44,10 @@
         "Authorizarion": "Bearer ${CONTEXT7_TOKEN}"
       },
       "enabled": true
+    },
+    "google_workspace": {
+      "type": "http",
+      "url": "http://localhost:8000/mcp"
     }
   }
 }

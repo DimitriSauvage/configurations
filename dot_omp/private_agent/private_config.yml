@@ -52,10 +52,14 @@ plan:
 task:
   eager: always
   enableLsp: true
-  maxRecursionDepth: 3
+  maxRecursionDepth: -1
   isolation:
     enabled: true
 isolation:
   backend: auto
 commands:
   enableOpencodeUser: false
+dev:
+  autoqaConsent: granted
+display:
+  subagentLivePreview: true
