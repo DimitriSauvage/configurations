@@ -63,3 +63,6 @@ dev:
   autoqaConsent: granted
 display:
   subagentLivePreview: true
+spelling:
+  autocomplete: smollm
+  autocorrect: true
