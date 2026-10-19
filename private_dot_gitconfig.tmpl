@@ -6,7 +6,7 @@
 	## Commit and push in one command without adding all changes
 	cp = "!f() { git commit -m \"$@\" && git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"; }; f"
 	# Remove local branches which are not on the remote anymore
-	sync = "!git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
+	sync = "!npx tsx ~/.config/git/scripts/git-sync.ts"
 	tp = "!f() { \
 		tag=\"$1\"; \
 		shift; \
@@ -26,10 +26,10 @@
 		git tag -a \"$tag\" -m \"$msg\" && git push origin \"$tag\"; \
 		fi; \
 	}; f"
-	sync-all = "!npx tsx ~/git-sync-all.ts"
+	sync-all = "!npx tsx ~/git-sync-all.ts --concurrency-limit=10"
 [core]
 	editor = nano
-	excludesfile = {{.chezmoi.homeDir}}/.gitignore
+	excludesfile = /Users/dsauvage/.gitignore
 	fsmonitor = true
 	untrackedCache = true
 	emptyDirectories = true
@@ -76,5 +76,11 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-	name = {{ .name }}
-	email = {{ .email }}
+	name = Dimitri SAUVAGE
+	email = dsauvage@beetween.com
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
