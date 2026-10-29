@@ -23,20 +23,22 @@ defaultThinkingLevel: auto
 hideThinkingBlock: true
 proseOnlyThinking: false
 cycleOrder:
-  - smol
   - default
+  - smol
   - slow
   - plan
+  - thinking
 modelRoles:
+  default: openrouter/~z-ai/glm-flash-latest:max
   commit: ollama/commit-bot:latest
   tiny: ollama/qwen2.5-coder:7b
   smol: ~z-ai/glm-flash-latest:low
   advisor: openrouter/~z-ai/glm-flash-latest
-  default: openrouter/~z-ai/glm-flash-latest:max
   slow: openrouter/~deepseek/deepseek-v4-flash-latest:max
   vision: openrouter/qwen/qwen3.8-max:auto
   task: openrouter/~z-ai/glm-flash-latest:auto
   plan: openrouter/~deepseek/deepseek-v4-flash-latest:max
+  thinking: openrouter/google/gemini-4-argon:flex
 autolearn:
   enabled: true
 memory:
@@ -66,3 +68,4 @@ display:
 spelling:
   autocomplete: smollm
   autocorrect: true
+extendedContext: true

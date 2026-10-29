@@ -1,5 +1,5 @@
-Host github.com
-    HostName github.com
+Host beetween.ghe.com
+    HostName beetween.ghe.com
     User git
     IdentityFile ~/.ssh/id_ed25519_github_professional
     IdentitiesOnly yes

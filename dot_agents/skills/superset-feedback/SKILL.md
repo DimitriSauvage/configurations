@@ -1,14 +1,16 @@
 ---
 name: superset-feedback
-description: Collect and submit feedback about Superset (bug reports, feature requests, or general feedback) privately to the Superset team or as a public GitHub issue. Use when the user wants to report a Superset bug, request a feature, or send feedback about Superset.
+description: Collect and submit feedback about Paradev (formerly Superset) (bug reports, feature requests, or general feedback) privately to the Superset team or as a public GitHub issue. Use when the user wants to report a Superset bug, request a feature, or send feedback about Superset.
 argument-hint: describe the bug, request, or feedback
-allowed-tools: Bash(superset:*) Bash(gh:*) Bash(uname:*)
+allowed-tools: Bash(superset:*) Bash(paradev:*) Bash(gh:*) Bash(uname:*) WebFetch WebSearch
 ---
 <!-- superset-managed-skill v1 -->
 
 # Superset Feedback
 
-Turn the user's feedback about Superset into a short, scannable report and submit it where they choose. Treat whatever they wrote after the command as the seed.
+`paradev` is an alias for the `superset` CLI: every `superset` command here also runs as `paradev`.
+
+Check Superset's documentation for an existing answer first. When feedback still needs reporting, turn it into a short, scannable report and submit it where the user chooses. Treat whatever they wrote after the command as the seed.
 
 The reader is a Superset engineer triaging dozens of reports. They should get the point from the title, the full picture from the summary bullets, and only read further when they need detail. Cut everything that doesn't help them reproduce or decide.
 
@@ -19,6 +21,14 @@ Every private submission CCs the reporter, so they already have a copy in their 
 If the seed reads like a continuation ("follow-up", "again", "still happening", "update on", "retraction", "root cause", "I already sent", "third time"), or the user filed something on this topic earlier in the session, ask whether they already sent a report about it. If they did, tell them to reply to that email with the new information and stop here. Only file fresh when they confirm it's a different issue.
 
 Never title a report "Follow-up:", "ROOT CAUSE:", or "RETRACTION"; those belong in a reply.
+
+### Check the knowledge base before gathering report details
+
+Search the Superset documentation for the user's question, symptom, or requested capability. Use `docs_search` with relevant keywords, then `docs_read` on promising results when the Superset docs MCP tools are available. Otherwise fetch `https://docs.superset.sh/llms.txt` and read the relevant linked pages, or use web search restricted to `docs.superset.sh`. Use generic product terms and error messages; keep private paths, account details, and logs out of search queries.
+
+Read the actual page before treating a result as an answer. Check that it applies to the user's platform, version, and circumstances. If it does, answer directly with the relevant steps and a link to the source. For a requested feature that already exists, explain how to use it. For a bug, offer the documented fix and verify the outcome before treating it as resolved. A related article or workaround alone does not mean the issue is resolved.
+
+If the answer resolves the request and the user has not asked to file anyway, stop without drafting a report. If it does not help, or the user still wants to send feedback, continue below and include the relevant article and what was tried in the draft. Do not make them repeat troubleshooting already covered in the conversation. If the docs are unavailable or no answer matches, continue with the report; do not block submission or claim no answer exists when the lookup failed.
 
 ## 1. Gather context (best effort, never block)
 
@@ -34,7 +44,7 @@ Don't include repository contents, terminal output, or logs unless the user expl
 
 Many reports describe bugs already fixed in a newer release. Desktop, CLI, and host service share one version number, so compare what's running against the latest release:
 
-- Latest: `superset update --check --json` (standalone CLI). If it says the CLI is bundled with the desktop app, the CLI version is the app version; get the latest from `gh release download cli-latest -R superset-sh/superset -p version.txt -O -` instead.
+- Latest: `superset update --check --json` (standalone CLI). If it says the CLI is bundled with the desktop app, the CLI version is the app version; get the latest from `gh release download cli-latest -R paradevai/paradev -p version.txt -O -` instead.
 - Running: the CLI version, and `hostServiceVersion` from `superset status --json` if it differs.
 
 If anything is behind, say so before drafting and ask whether they want to update first (the desktop app updates itself from its menu; a standalone CLI with `superset update`). If they'd rather file now, note the versions in the report.
@@ -137,7 +147,7 @@ Never submit anything before the user explicitly picks 1 or 2. Loop on edits.
 ## 4. Submit
 
 **Private path:**
-- If `superset feedback --help` exits 0, submit via stdin (note: `--body-file=-` with the equals sign; a space-separated `-` is rejected by the parser):
+- If `superset feedback --help >/dev/null 2>&1` exits 0 (the exit code alone says the command exists; it works on every CLI version and needs no `jq`), submit via stdin (note: `--body-file=-` with the equals sign; a space-separated `-` is rejected by the parser):
   ```bash
   superset feedback submit --type <bug|feature|general> --title "..." --body-file=- <<'EOF'
   <drafted report>
@@ -147,9 +157,9 @@ Never submit anything before the user explicitly picks 1 or 2. Loop on edits.
 - If the CLI is missing or not logged in (`superset auth whoami` fails), offer `superset auth login` first; if declined, fall back to email: give the user a clickable mailto link (`mailto:support@superset.sh?subject=<url-encoded title>&body=<url-encoded body>`) and also print the raw draft so they can copy it.
 
 **Public path:**
-- **Check for duplicates first**: `gh search issues -R superset-sh/superset "<key terms>" --limit 5`. If an existing issue matches, show it and offer to comment there (`gh issue comment`) instead of opening a new one; only create a fresh issue if the user confirms it's genuinely different.
-- If `gh` is installed and `gh auth status` succeeds: `gh issue create -R superset-sh/superset --title "..." --body "..."` (write the body via a heredoc or temp file, never inline-escape).
-- Otherwise open the prefilled form in the browser: `https://github.com/superset-sh/superset/issues/new?title=<url-encoded>&body=<url-encoded>`.
+- **Check for duplicates first**: `gh search issues -R paradevai/paradev "<key terms>" --limit 5`. If an existing issue matches, show it and offer to comment there (`gh issue comment`) instead of opening a new one; only create a fresh issue if the user confirms it's genuinely different.
+- If `gh` is installed and `gh auth status` succeeds: `gh issue create -R paradevai/paradev --title "..." --body "..."` (write the body via a heredoc or temp file, never inline-escape).
+- Otherwise open the prefilled form in the browser: `https://github.com/paradevai/paradev/issues/new?title=<url-encoded>&body=<url-encoded>`.
 
 ## 5. Confirm
 

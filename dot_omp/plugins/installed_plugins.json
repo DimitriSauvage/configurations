@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "plugins": {
+    "plannotator@plannotator": [
+      {
+        "scope": "user",
+        "installPath": "/Users/dsauvage/.omp/plugins/cache/plugins/plannotator___plannotator___0.27.17",
+        "version": "0.27.17",
+        "installedAt": "2026-09-23T12:38:38.152Z",
+        "lastUpdated": "2026-09-23T12:38:38.152Z"
+      }
+    ],
+    "agent-skills@addy-agent-skills": [
+      {
+        "scope": "user",
+        "installPath": "/Users/dsauvage/.omp/plugins/cache/plugins/addy-agent-skills___agent-skills___0.6.13",
+        "version": "0.6.13",
+        "installedAt": "2026-10-19T07:25:00.526Z",
+        "lastUpdated": "2026-10-19T07:25:00.526Z"
+      }
+    ],
+    "ppt-master@ppt-master": [
+      {
+        "scope": "user",
+        "installPath": "/Users/dsauvage/.omp/plugins/cache/plugins/ppt-master___ppt-master___0.0.0",
+        "version": "0.0.0",
+        "installedAt": "2026-10-29T16:16:20.401Z",
+        "lastUpdated": "2026-10-29T16:16:20.401Z"
+      }
+    ]
+  }
+}

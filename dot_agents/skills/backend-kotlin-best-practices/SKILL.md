@@ -260,6 +260,36 @@ class Request private constructor(...) {
 - `create()` — enforces domain invariants, returns `Result`
 - `rehydrate()` — reconstitutes from trusted persistence data, skips validation, never returns `Err`
 
+### Consistent `copy()` visibility — mandatory with private constructors
+
+A `data class` with a `private constructor` still generates a **public** `copy()`
+(Kotlin ≥2.0.20 warns: *"Non-public primary constructor is exposed via the generated 'copy()' method"*).
+Any caller could bypass the factory-enforced invariants via `copy(...)`. Two fixes, in preference order:
+
+**1. Project-wide compiler flag (preferred — one line, covers every class incl. future ones):**
+
+```xml
+<!-- kotlin-maven-plugin <configuration> in the project pom -->
+<args>
+  <arg>-Xjsr305=strict</arg>
+  <arg>-Xconsistent-data-class-copy-visibility</arg>
+</args>
+```
+
+Gotcha: a child pom declaring `<args>` overrides the parent's list — re-declare `-Xjsr305=strict`
+(verify with `mvn help:effective-pom`). Kotlin plans to make this behavior the language default in a
+future version; keep the flag until then.
+
+**2. Per-class annotation (fallback when the build config is owned elsewhere):**
+
+```kotlin
+@ConsistentCopyVisibility
+data class CvRef private constructor(...)
+```
+
+NEVER fix the warning by making the constructor public, adding `@ExposedCopyVisibility`
+(keeps the invariant hole), or dropping the factory pattern.
+
 ---
 
 ## Kotlin-Specific Spring Boot Patterns
