@@ -4,6 +4,7 @@
 	# Uncommit the last commit but keep the changes in the working directory
 	uncommit = reset --soft HEAD~
 	## Commit and push in one command without adding all changes
+	mp = "!f() { git switch master && git fetch --prune && git pull }; f"
 	cp = "!f() { git commit -m \"$@\" && git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\"; }; f"
 	tp = "!f() { \
 		tag=\"$1\"; \
@@ -26,6 +27,7 @@
 	}; f"
 	sync-all = "!npx tsx ~/git-sync-all.ts --concurrency-limit=10"
 	sync = "!npx tsx ~/git-sync.ts"
+	master-all = "!npx tsx ~/git-master-all.ts"
 [core]
 	editor = nano
 	excludesfile = /Users/dsauvage/.gitignore

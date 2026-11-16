@@ -38,7 +38,7 @@ modelRoles:
   vision: openrouter/qwen/qwen3.8-max:auto
   task: openrouter/~z-ai/glm-flash-latest:auto
   plan: openrouter/~deepseek/deepseek-v4-flash-latest:max
-  thinking: openrouter/google/gemini-4-argon:flex
+  thinking: openrouter/google/gemini-4-argon
 autolearn:
   enabled: true
 memory:
